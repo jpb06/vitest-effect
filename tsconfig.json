@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "types": [
+      "node"
+      // "vitest"
+      // "@vitest/runner",
+      // "@vitest/runner/dist/types",
+      // "@vitest/runner/dist/tasks-_kyNRBhz"
+    ],
+    "downlevelIteration": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "outDir": "./dist",
+    "declaration": true
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", "dist"]
+}

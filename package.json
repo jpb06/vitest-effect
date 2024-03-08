@@ -1,0 +1,51 @@
+{
+  "repository": "https://github.com/jpb06/vitest-effect.git",
+  "main": "dist/index.js",
+  "name": "vitest-effect",
+  "version": "1.0.0",
+  "author": "jpb06 <jp.bois.06@outlook.fr>",
+  "description": "extending vitest for effect",
+  "keywords": [],
+  "license": "MIT",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "update-deps": "bunx npm-check-updates --root --format group -i",
+    "copy-package": "copyfiles package.json ./dist/",
+    "copy-readme": "copyfiles README.md ./dist/",
+    "build": "del-cli ./dist && tsc --project tsconfig-prod.json",
+    "postbuild": "bun run copy-package && bun run copy-readme",
+    "lint": "eslint ./src",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test-ci": "vitest --coverage --run",
+    "test-dev": "vitest --coverage",
+    "test-coverage": "vitest run --coverage",
+    "sync-icons": "bun generateReadmeIcons -h 50",
+    "run-examples": "for i in ./src/examples/*.ts; do bun run $i; done"
+  },
+  "dependencies": {
+    "effect": "^2.4.1",
+    "vitest": "^1.3.1"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^1.6.3",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.25",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "@vitest/coverage-v8": "^1.3.1",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "readme-package-icons": "^1.1.14",
+    "typescript": "^5.4.2"
+  }
+}
