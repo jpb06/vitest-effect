@@ -1,5 +1,6 @@
-import { describe, expect, vi } from 'vitest';
 import { Effect } from 'effect';
+import { describe, expect, vi } from 'vitest';
+
 import { it } from '../extend/it-effect.extend';
 
 describe('yolo bro', () => {
