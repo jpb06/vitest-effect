@@ -1,5 +1,5 @@
 import { Effect } from 'effect';
-import { describe, expect, vi } from 'vitest';
+import { describe, expect } from 'vitest';
 
 import { it } from '../extend/it-effect.extend';
 
